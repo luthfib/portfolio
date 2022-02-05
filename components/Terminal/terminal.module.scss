@@ -1,0 +1,47 @@
+.terminal {
+  display: grid;
+  grid-template-rows: 15px 1fr;
+  row-gap: 1.5rem;
+  width: 100%;
+  padding: 1rem 0.5rem 0.5rem 1.5rem;
+  min-height: 250px;
+  background: var(--terminal-black);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6px -1px rgba(255, 255, 255, 0.06),
+    0px 2px 4px -1px rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  ul {
+    list-style-type: none;
+    padding: 0rem 1rem;
+    margin: 0rem;
+  }
+}
+
+.menubar div {
+  cursor: pointer;
+}
+.menubar {
+  display: flex;
+  gap: 5px;
+  :hover {
+    opacity: 0.9;
+  }
+}
+.menubarClose {
+  background: var(--apple-red);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.menubarMinimize {
+  background: var(--apple-yellow);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.menubarFullscreen {
+  background: var(--apple-green);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
