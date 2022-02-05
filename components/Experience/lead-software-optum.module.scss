@@ -28,6 +28,28 @@
   }
 }
 
+.grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 4rem;
+  column-gap: 7.5rem;
+}
+
+.attribute {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skills {
+  background: var(--black-2);
+  border-radius: 0.8rem;
+  padding: 2rem 3rem;
+  grid-row: span 2;
+}
+
 .line {
   width: 0.1rem;
   background: var(--black-2);
