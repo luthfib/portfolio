@@ -1,4 +1,4 @@
-import { Terminal } from "../Terminal";
+import { Terminal } from "../terminal";
 import styles from "./intro.module.scss";
 
 export const Intro = () => (

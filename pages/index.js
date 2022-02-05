@@ -1,7 +1,7 @@
-import { Experience } from "../components/Experience";
-import Footer from "../components/Footer";
-import { Intro } from "../components/Intro";
-import { Projects } from "../components/Projects";
+import { Experience } from "../components/experience";
+import Footer from "../components/footer";
+import { Intro } from "../components/intro";
+import { Projects } from "../components/projects";
 
 export default function Home() {
   return (

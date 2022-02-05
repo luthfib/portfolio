@@ -1,0 +1,21 @@
+.skills {
+  background: var(--black-2);
+  border-radius: 0.8rem;
+  padding: 2rem 3rem;
+  grid-row: span 2;
+
+  h3 {
+    margin-bottom: 2rem;
+    background: linear-gradient(
+      70deg,
+      rgba(59, 130, 246, 0.9) -200%,
+      rgba(239, 68, 68, 1) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-weight: 300;
+  }
+}
