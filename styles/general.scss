@@ -1,0 +1,17 @@
+:root {
+  --bg-color: #1c1c1c;
+  --black-2: rgba(255, 255, 255, 0.05);
+  --text-color: #888888;
+  --font-family: "Inter", sans-serif;
+  --font-size: 62.5%; /*10px*/
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  background: var(--bg-color);
+}
