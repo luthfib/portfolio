@@ -8,7 +8,7 @@
   --apple-yellow: #ffbd2e;
   --terminal-black: #070000;
 
-  --font-family: "Inter", sans-serif;
+  --font-family: "Inter", system-ui;
   --font-size: 62.5%; /*10px*/
   --font-size-00: 1.2rem;
   --font-size-0: 1.4rem;
@@ -35,19 +35,21 @@ body {
 
 h1,
 .h1 {
+  color: var(--white);
   margin-top: 0;
   font-size: var(--font-size-4);
   font-weight: var(--font-weight-8);
-  color: var(--brand-1);
 }
 
 h2,
 .h2 {
+  color: var(--white);
   font-size: var(--font-size-3);
 }
 
 h3,
 .h3 {
+  color: var(--white);
   font-size: var(--font-size-2);
 }
 
