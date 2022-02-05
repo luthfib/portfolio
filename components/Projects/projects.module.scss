@@ -1,7 +1,7 @@
 .projectsSection {
   margin: auto;
   padding: 0rem 8rem;
-  margin-top: 15rem;
+  margin-top: var(--distance-btwn-sections);
 
   h1 {
     text-align: center;
@@ -15,6 +15,7 @@
 .projects {
   display: flex;
   column-gap: 12.5rem;
+  justify-content: center;
 }
 
 .project {
