@@ -1,3 +1,4 @@
+import { DataEngineer } from "./data-engineer";
 import { LeadEngineer } from "./lead-engineer";
 import { ResearchEngineer } from "./research-engineer";
 import { SoftwareEngineer } from "./software-engineer";
@@ -9,5 +10,6 @@ export const Experience = () => (
     <LeadEngineer />
     <ResearchEngineer />
     <SoftwareEngineer />
+    <DataEngineer />
   </section>
 );
