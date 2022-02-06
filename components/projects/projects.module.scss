@@ -16,6 +16,11 @@
   display: flex;
   column-gap: 12.5rem;
   justify-content: center;
+
+  @media (max-width: 1250px) {
+    flex-wrap: wrap;
+    row-gap: 7.5rem;
+  }
 }
 
 .project {
