@@ -26,7 +26,7 @@ const Tabs = () => {
 export const DataEngineer = () => (
   <div className={commonStyles.container}>
     <ExperienceTimelineHeader
-      year={"2021"}
+      year={"2017"}
       role={"Data Engineer - Connectwise"}
       gradient={styles.pinkishGradient}
     />
