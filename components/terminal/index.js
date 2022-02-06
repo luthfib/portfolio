@@ -14,13 +14,12 @@ export const Terminal = () => (
       <AppleMenuBar />
     </div>
     <div>
-      <p>~ ls programming languages</p>
-      <ul>
+      <p className={styles.animTypewriter}>~ ls programming languages</p>
+      <ul className={styles.animTypewriterEnter}>
         <li>python</li>
         <li>golang</li>
         <li>javascript</li>
       </ul>
-      <p>~</p>
     </div>
   </div>
 );
