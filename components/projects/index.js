@@ -4,7 +4,6 @@ import styles from "./projects.module.scss";
 import { useOnClickOutside } from "../../lib/hooks";
 
 const Modal = ({ description, techUsed, setModalIsOpen }) => {
-  console.log("DESCRIPTION", description);
   const ref = useRef(null);
 
   const CloseModal = () => {
