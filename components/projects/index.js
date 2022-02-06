@@ -24,8 +24,8 @@ const Modal = ({ description, techUsed, setModalIsOpen }) => {
             <p>{techUsed}</p>
           </div>
         </div>
-        <div className={styles.buttonContainer}>
-          <button onClick={CloseModal}>Close</button>
+        <div onClick={CloseModal} className={styles.buttonContainer}>
+          <button>Close</button>
         </div>
       </div>
     </div>

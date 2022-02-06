@@ -90,7 +90,7 @@
   width: calc(28 * 1.6rem);
   vertical-align: middle;
   display: inline-block;
-  background: #111111;
+  background: #111;
   border: 1px solid var(--grey-1);
   border-radius: 0.8rem;
   // padding: 2.5rem 4rem;
@@ -115,8 +115,14 @@
     font-weight: 300;
   }
 
-  button:hover {
-    color: var(--white);
+  &:hover {
+    background: #000;
+    border-radius: 0 0 0.8rem 0.8rem;
+    cursor: pointer;
+
+    button {
+      color: var(--white);
+    }
   }
 }
 
