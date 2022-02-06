@@ -17,6 +17,15 @@
   --font-size-2: 1.8rem;
   --font-size-3: 2.2rem;
   --font-size-4: 2.4rem;
+  --selection: hsl(0 0% 100%/0.077);
+  --gray: #707070;
+}
+
+::selection {
+  background: var(--selection);
+  text-shadow: none;
+  -webkit-text-decoration-color: var(--gray);
+  text-decoration-color: var(--gray);
 }
 
 html {
