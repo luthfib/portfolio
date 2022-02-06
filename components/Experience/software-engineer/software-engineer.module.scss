@@ -1,0 +1,30 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 4;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    border-bottom: 1px solid #444444;
+    padding: 1rem;
+    width: 100%;
+    background: linear-gradient(
+      92.85deg,
+      rgba(75, 150, 255, 0.5) -29.84%,
+      #ffd644 99.02%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: fit-content;
+    padding: 0rem;
+  }
+}

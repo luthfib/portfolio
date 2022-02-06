@@ -1,6 +1,7 @@
 import { Attribute, ExperienceTimelineHeader } from "../common";
 
-import styles from "../common/common.module.scss";
+import commonStyles from "../common/common.module.scss";
+import styles from "./software-engineer.module.scss";
 
 const Skills = () => {
   const skills = [
@@ -17,9 +18,8 @@ const Skills = () => {
   ];
 
   return (
-    <div>
-      <h3>Skills</h3>
-      <hr />
+    <div className={styles.skills}>
+      <h2>Skills</h2>
       <ul>
         {skills.map((skill) => (
           <li key={skill}>{skill}</li>
@@ -30,13 +30,13 @@ const Skills = () => {
 };
 
 export const SoftwareEngineer = () => (
-  <div className={styles.container}>
+  <div className={commonStyles.container}>
     <ExperienceTimelineHeader
       year={"2019"}
       role={"Software Engineer- Optum"}
-      gradient={styles.orangeGradient}
+      gradient={commonStyles.orangeGradient}
     />
-    <div className={styles.grid}>
+    <div className={commonStyles.grid}>
       <Skills />
       <Attribute
         heading={"Automated"}
