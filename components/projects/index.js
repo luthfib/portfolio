@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import styles from "./projects.module.scss";
+import { useOnClickOutside } from "../../lib/hooks";
 
 const Modal = ({ setModalIsOpen }) => {
+  const ref = useRef(null);
+
   const CloseModal = () => {
     document.body.classList.remove("modal-open");
     setModalIsOpen(false);
   };
+  useOnClickOutside(ref, () => setModalIsOpen(false));
 
   return (
-    <div onClick={CloseModal} className={styles.overlay} aria-hidden="true">
-      <div role="dialog" tabIndex={"-1"} className={styles.modal}>
+    <div className={styles.overlay} aria-hidden="true">
+      <div role="dialog" tabIndex={"-1"} className={styles.modal} ref={ref}>
         <div className={styles.modalContent}>
           <h3>Details</h3>
           <p>
@@ -24,7 +28,7 @@ const Modal = ({ setModalIsOpen }) => {
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <button>Close</button>
+          <button onClick={CloseModal}>Close</button>
         </div>
       </div>
     </div>
