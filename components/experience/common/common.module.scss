@@ -3,6 +3,22 @@
   flex-direction: column;
   align-items: center;
   padding: 0rem 20rem;
+
+  @media (max-width: 1200px) {
+    padding: 0rem 15rem;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 0rem 10rem;
+  }
+
+  @media (max-width: 750px) {
+    padding: 0rem 5rem;
+  }
+
+  @media (max-width: 550px) {
+    padding: 0rem 2.5rem;
+  }
 }
 
 .grid {
@@ -12,6 +28,10 @@
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 4rem;
   column-gap: 7.5rem;
+
+  @media (max-width: 600px) {
+    column-gap: 3rem;
+  }
 }
 
 .attribute {
