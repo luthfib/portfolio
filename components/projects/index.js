@@ -1,12 +1,55 @@
+import React, { useState } from "react";
+
 import styles from "./projects.module.scss";
 
-const Project = ({ name, descripton, src, altSrc }) => (
-  <div className={styles.project}>
-    <img src={src} alt={altSrc} />
-    <h3>{name}</h3>
-    <p>{descripton}</p>
-  </div>
-);
+const Modal = ({ setModalIsOpen }) => {
+  const CloseModal = () => {
+    document.body.classList.remove("modal-open");
+    setModalIsOpen(false);
+  };
+
+  return (
+    <div onClick={CloseModal} className={styles.overlay} aria-hidden="true">
+      <div role="dialog" tabIndex={"-1"} className={styles.modal}>
+        <div className={styles.modalContent}>
+          <h3>Details</h3>
+          <p>
+            Modernized tech stack to increase web performance vitals and give
+            fresh look
+          </p>
+
+          <div className={styles.poweredBy}>
+            <h5>Powered By</h5>
+            <p>React, Next.js, styled-jsx, and Vercel</p>
+          </div>
+        </div>
+        <div className={styles.buttonContainer}>
+          <button>Close</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Project = ({ name, descripton, src, altSrc }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    document.body.classList.add("modal-open");
+    setModalIsOpen(true);
+  };
+
+  return (
+    <>
+      {modalIsOpen ? <Modal setModalIsOpen={setModalIsOpen} /> : null}
+      <div className={styles.project} onClick={openModal}>
+        <img src={src} alt={altSrc} />
+        <h3>{name}</h3>
+        <p>{descripton}</p>
+      </div>
+    </>
+  );
+};
 
 export const Projects = () => (
   <section className={styles.projectsSection}>

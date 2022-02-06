@@ -5,7 +5,7 @@ export const Education = () => (
     <h1>Education</h1>
     <div>
       <h2>BS in Information Science</h2>
-      <h3>Universtiy of North Carolina at Chapel Hill</h3>
+      <h3>University of North Carolina at Chapel Hill</h3>
     </div>
   </section>
 );
