@@ -37,7 +37,7 @@ const Skills = ({ width, height }) => {
     <div
       ref={ref}
       className={styles.skillsGrid}
-      style={{ width: `${width}px `, height: `${height}px ` }}
+      style={{ width: `${width}px` }}
     >
       <div className={styles.skillSection}>
         <h3>Python Frameworks</h3>

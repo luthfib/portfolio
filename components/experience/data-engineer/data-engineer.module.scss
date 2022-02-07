@@ -25,6 +25,10 @@
   -moz-column-gap: 7.5rem;
   column-gap: 7.5rem;
   justify-content: inherit;
+
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 .skillSection {
