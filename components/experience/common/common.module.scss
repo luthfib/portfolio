@@ -37,6 +37,7 @@
 }
 
 .attribute {
+  @include start-animation-state;
   display: flex;
   flex-direction: column;
   gap: 2rem;
