@@ -1,3 +1,5 @@
+@import "../../../styles/mixins.scss";
+
 .container {
   margin-top: 4rem;
   background: var(--black-2);
@@ -11,6 +13,8 @@
 }
 
 .skillsGrid {
+  @include start-animation-state;
+  display: flex;
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -52,6 +56,7 @@
 }
 
 .tabs {
+  @include start-animation-state;
   display: flex;
   gap: 1rem;
 

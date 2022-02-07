@@ -1,15 +1,18 @@
 import { Attribute, ExperienceTimelineHeader } from "../common";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import commonStyles from "../common/common.module.scss";
 import styles from "./data-engineer.module.scss";
+import { useAnimateOnViewport } from "../../../lib/hooks";
 import { useElementSize } from "../../../lib/hooks";
 
 const Tabs = ({ currentTab, setCurrentTab }) => {
   const tabs = ["Summary", "Skills"];
+  const ref = useRef(null);
+  useAnimateOnViewport(ref);
 
   return (
-    <div className={styles.tabs}>
+    <div ref={ref} className={styles.tabs}>
       {tabs.map((tab) => (
         <p
           key={tab}
@@ -27,9 +30,12 @@ const Skills = ({ width, height }) => {
   const pythonFrameworks = ["Pandas", "Numpy", "Airflow"];
   const databaseSystems = ["Redshift", "MSSQL"];
   const other = ["D3", "CSS", "Docker", "Javascript", "ELK stack"];
+  const ref = useRef(null);
+  useAnimateOnViewport(ref);
 
   return (
     <div
+      ref={ref}
       className={styles.skillsGrid}
       style={{ width: `${width}px `, height: `${height}px ` }}
     >

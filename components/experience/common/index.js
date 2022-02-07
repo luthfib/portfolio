@@ -5,6 +5,7 @@ import { useRef } from "react";
 export const Attribute = ({ heading, description }) => {
   const ref = useRef(null);
   useAnimateOnViewport(ref);
+
   return (
     <div ref={ref} className={styles.attribute}>
       <h3>{heading}</h3>
