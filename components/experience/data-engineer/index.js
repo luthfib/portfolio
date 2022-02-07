@@ -1,12 +1,12 @@
 import { Attribute, ExperienceTimelineHeader } from "../common";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import commonStyles from "../common/common.module.scss";
 import styles from "./data-engineer.module.scss";
+import { useElementSize } from "../../../lib/hooks";
 
-const Tabs = () => {
+const Tabs = ({ currentTab, setCurrentTab }) => {
   const tabs = ["Summary", "Skills"];
-  const [currentTab, setCurrentTab] = useState("Summary");
 
   return (
     <div className={styles.tabs}>
@@ -23,51 +23,110 @@ const Tabs = () => {
   );
 };
 
-export const DataEngineer = () => (
-  <div className={commonStyles.container}>
-    <ExperienceTimelineHeader
-      year={"2017"}
-      role={"Data Engineer - Connectwise"}
-      gradient={styles.pinkishGradient}
-    />
-    <div className={styles.container}>
-      <Tabs />
-      <div className={commonStyles.grid}>
-        <Attribute
-          heading={"Built"}
-          description={"Custom frontend solution from start to finish"}
-        />
-        <Attribute
-          heading={"Maintaned"}
-          description={
-            "Maintained and optimized Redshift DB in AWS, as well as EMR cluster for data pulls"
-          }
-        />
-        <Attribute
-          heading={"Set up"}
-          description={
-            "Setup and Hooked up db connection logic to feed in custom visualization and data"
-          }
-        />
-        <Attribute
-          heading={"Separated"}
-          description={
-            "Built Shell scripts in Linux to automate data pull from customer instances"
-          }
-        />
-        <Attribute
-          heading={"Shell Scripts"}
-          description={
-            "Separated frontend,backend, & Redis into their own skills"
-          }
-        />
-        <Attribute
-          heading={"Machine Learning"}
-          description={
-            "Assisted with Machine Learning models & data-driven solutions"
-          }
-        />
+const Skills = ({ width, height }) => {
+  const pythonFrameworks = ["Pandas", "Numpy", "Airflow"];
+  const databaseSystems = ["Redshift", "MSSQL"];
+  const other = ["D3", "CSS", "Docker", "Javascript", "ELK stack"];
+
+  return (
+    <div
+      className={styles.skillsGrid}
+      style={{ width: `${width}px `, height: `${height}px ` }}
+    >
+      <div className={styles.skillSection}>
+        <h3>Python Frameworks</h3>
+        <ul>
+          {pythonFrameworks.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div className={styles.skillSection}>
+        <h3>Database Systems</h3>
+        <ul>
+          {databaseSystems.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={styles.skillSection}>
+        <h3>Other</h3>
+        <ul>
+          {other.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </ul>
       </div>
     </div>
+  );
+};
+
+const Summary = ({ forwardRef }) => (
+  <div ref={forwardRef} className={commonStyles.grid}>
+    <Attribute
+      heading={"Built"}
+      description={"Custom frontend solution from start to finish"}
+    />
+    <Attribute
+      heading={"Maintaned"}
+      description={
+        "Maintained and optimized Redshift DB in AWS, as well as EMR cluster for data pulls"
+      }
+    />
+    <Attribute
+      heading={"Set up"}
+      description={
+        "Setup and Hooked up db connection logic to feed in custom visualization and data"
+      }
+    />
+    <Attribute
+      heading={"Separated"}
+      description={
+        "Built Shell scripts in Linux to automate data pull from customer instances"
+      }
+    />
+    <Attribute
+      heading={"Shell Scripts"}
+      description={"Separated frontend,backend, & Redis into their own skills"}
+    />
+    <Attribute
+      heading={"Machine Learning"}
+      description={
+        "Assisted with Machine Learning models & data-driven solutions"
+      }
+    />
   </div>
 );
+
+export const DataEngineer = () => {
+  const [currentTab, setCurrentTab] = useState("Summary");
+  const [ref, { width, height }] = useElementSize();
+  const [summaryWidth, setSummaryWidth] = useState(0);
+  const [summaryHeight, setSummaryHeight] = useState(0);
+
+  useEffect(() => {
+    if (width > 0) {
+      setSummaryWidth(width);
+      setSummaryHeight(height);
+    }
+  }, [width]);
+
+  return (
+    <div className={commonStyles.container}>
+      <ExperienceTimelineHeader
+        year={"2017"}
+        role={"Data Engineer - Connectwise"}
+        gradient={styles.pinkishGradient}
+      />
+      <div className={styles.container}>
+        <Tabs currentTab={currentTab} setCurrentTab={setCurrentTab} />
+        {currentTab === "Summary" ? (
+          <Summary forwardRef={ref} />
+        ) : (
+          <Skills width={summaryWidth} height={summaryHeight} />
+        )}
+      </div>
+    </div>
+  );
+};
