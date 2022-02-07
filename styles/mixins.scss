@@ -1,0 +1,9 @@
+@mixin start-animation-state {
+  --duration: 0.5s;
+  --easing: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  --delay: 0s;
+  --animate-x: 20px;
+  opacity: 0;
+  transition: opacity var(--duration) var(--easing) var(--delay),
+    transform var(--duration) var(--easing) var(--delay);
+}

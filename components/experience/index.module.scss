@@ -1,9 +1,16 @@
+@import "../../styles/mixins.scss";
+
 .experience {
-  margin-top: var(--distance-btwn-sections);
+  --duration: 0.5s;
+  --easing: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  --delay: 0s;
+  --animate-x: 20px;
 
   h1 {
+    @include start-animation-state;
     text-align: center;
     font-weight: bold;
     margin-bottom: 5rem;
+    margin-top: var(--distance-btwn-sections);
   }
 }
