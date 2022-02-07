@@ -4,6 +4,6 @@
   --delay: 0s;
   --animate-x: 20px;
   opacity: 0;
-  // transition: opacity var(--duration) var(--easing) var(--delay),
-  //   transform var(--duration) var(--easing) var(--delay);
+  transition: opacity var(--duration) var(--easing) var(--delay),
+    transform var(--duration) var(--easing) var(--delay);
 }
