@@ -28,6 +28,10 @@
 
   @media (max-width: 750px) {
     grid-template-columns: repeat(2, auto);
+
+    // div:last-child {
+    //   grid-column: 2 / 4;
+    // }
   }
 }
 
