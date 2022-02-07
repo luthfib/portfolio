@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .projectsSection {
   margin: auto;
   padding: 0rem 8rem;
@@ -32,6 +34,7 @@
 }
 
 .project {
+  @include start-animation-state;
   background: var(--black-2);
   border-radius: 8px;
   padding: 5rem 4rem;

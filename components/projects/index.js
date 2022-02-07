@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 
 import styles from "./projects.module.scss";
+import { useAnimateOnViewport } from "../../lib/hooks";
 import { useOnClickOutside } from "../../lib/hooks";
 
 const Modal = ({ description, techUsed, setModalIsOpen }) => {
@@ -14,7 +15,7 @@ const Modal = ({ description, techUsed, setModalIsOpen }) => {
 
   return (
     <div className={styles.overlay} aria-hidden="true">
-      <div role="dialog" tabIndex={"-1"} className={styles.modal} ref={ref}>
+      <div ref={ref} role="dialog" tabIndex={"-1"} className={styles.modal}>
         <div className={styles.modalContent}>
           <h3>Details</h3>
           <p>{description}</p>
@@ -34,6 +35,8 @@ const Modal = ({ description, techUsed, setModalIsOpen }) => {
 
 const Project = ({ name, description, techUsed, src, altSrc }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const ref = useRef(null);
+  useAnimateOnViewport(ref);
 
   const openModal = () => {
     document.body.classList.add("modal-open");
@@ -49,7 +52,7 @@ const Project = ({ name, description, techUsed, src, altSrc }) => {
           description={description}
         />
       ) : null}
-      <div className={styles.project} onClick={openModal}>
+      <div ref={ref} className={styles.project} onClick={openModal}>
         <img src={src} alt={altSrc} />
         <h3>{name}</h3>
         <p>{description}</p>
