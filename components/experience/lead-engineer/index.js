@@ -5,21 +5,23 @@ import styles from "./lead-engineer.module.scss";
 import { useAnimateOnViewport } from "../../../lib/hooks";
 import { useRef } from "react";
 
-const Skills = () => (
-  <div className={styles.skills}>
-    <h3>Skills</h3>
-    <p>
-      React, Next.js, Typescript, Style-Components, React Testing Libary,
-      Python, Docker, Kubernetes, CSS{" "}
-    </p>
-  </div>
-);
-
-export const LeadEngineer = () => {
+const Skills = () => {
   const ref = useRef(null);
   useAnimateOnViewport(ref);
   return (
-    <div ref={ref} className={commonStyles.container}>
+    <div ref={ref} className={styles.skills}>
+      <h3>Skills</h3>
+      <p>
+        React, Next.js, Typescript, Style-Components, React Testing Libary,
+        Python, Docker, Kubernetes, CSS{" "}
+      </p>
+    </div>
+  );
+};
+
+export const LeadEngineer = () => {
+  return (
+    <div className={commonStyles.container}>
       <ExperienceTimelineHeader
         year={"2021"}
         role={"Lead Software Engineer - Optum"}

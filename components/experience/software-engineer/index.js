@@ -1,7 +1,9 @@
 import { Attribute, ExperienceTimelineHeader } from "../common";
+import { createRef, useRef } from "react";
 
 import commonStyles from "../common/common.module.scss";
 import styles from "./software-engineer.module.scss";
+import { useAnimateOnViewport } from "../../../lib/hooks";
 
 const Skills = () => {
   const skills = [
@@ -16,13 +18,17 @@ const Skills = () => {
     "Javascript",
     "Openshift",
   ];
+  const ref = useRef(skills.map(() => createRef()));
+  skills.map((_, i) => useAnimateOnViewport(ref.current[i]));
 
   return (
     <div className={styles.skills}>
       <h2>Skills</h2>
       <ul>
-        {skills.map((skill) => (
-          <li key={skill}>{skill}</li>
+        {skills.map((skill, i) => (
+          <li ref={ref.current[i]} key={skill}>
+            {skill}
+          </li>
         ))}
       </ul>
     </div>

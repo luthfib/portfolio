@@ -1,4 +1,7 @@
+@import "../../../styles/mixins.scss";
+
 .skills {
+  @include start-animation-state;
   background: var(--black-2);
   border-radius: 0.8rem;
   padding: 2rem 3rem;
