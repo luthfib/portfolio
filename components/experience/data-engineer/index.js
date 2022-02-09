@@ -71,8 +71,10 @@ const Skills = ({ width, height }) => {
 const Summary = ({ forwardRef }) => (
   <div ref={forwardRef} className={commonStyles.grid}>
     <Attribute
-      heading={"Built"}
-      description={"Custom frontend solution from start to finish"}
+      heading={"Patent"}
+      description={
+        "Patented a unique method that deters scammers from purchasing the company product"
+      }
     />
     <Attribute
       heading={"Maintaned"}
@@ -87,14 +89,14 @@ const Summary = ({ forwardRef }) => (
       }
     />
     <Attribute
-      heading={"Separated"}
+      heading={"Shell Scripts"}
       description={
         "Built Shell scripts in Linux to automate data pull from customer instances"
       }
     />
     <Attribute
-      heading={"Shell Scripts"}
-      description={"Separated frontend,backend, & Redis into their own skills"}
+      heading={"Seperated"}
+      description={"Separated frontend, backend, & Redis into their own skills"}
     />
     <Attribute
       heading={"Machine Learning"}

@@ -47,23 +47,23 @@ export const SoftwareEngineer = () => (
       <Attribute
         heading={"Automated"}
         description={
-          "Automated data pipelines & Cron Jobs with Airflow & Celery in Openshift"
+          "Automated unit tests, integration tests,and zero downtime deployements using Jenkins"
         }
       />
       <Attribute
         heading={"Built"}
         description={
-          "Built Jenkins pipelines to automate unit tests, integration tests,and zero downtime deployements"
+          "Built data piplines & schedulers using Airflow in Openshift"
         }
       />
       <Attribute
         heading={"Deployed"}
         description={
-          "Deployed apps in Openshift,including Logstash, ElasticSearch,Kibana and others"
+          "Deployed apps in Openshift,including Logstash, ElasticSearch,Kibana and amongst others"
         }
       />
       <Attribute
-        heading={"Wrote"}
+        heading={"Serverless"}
         description={
           "Wrote serverless functions & aided team in getting up to speed with serverless"
         }

@@ -38,7 +38,7 @@ export const ResearchEngineer = () => (
       />
       <Attribute
         heading={"Programmed"}
-        description={"Programmed  low-level and high-level code"}
+        description={"Programmed low-level and high-level code"}
       />
     </div>
   </div>
