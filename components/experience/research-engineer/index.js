@@ -11,34 +11,34 @@ export const ResearchEngineer = () => (
     />
     <div className={styles.grid}>
       <Attribute
-        heading={"Building"}
-        description={"Building new app using Typescript, React, and Nextjs"}
+        heading={"Designed"}
+        description={"Designed and implemented scalable software architecture"}
       />
       <Attribute
-        heading={"Leading"}
+        heading={"Troubleshot"}
         description={
-          "Leading and implementing UI/UX designs for newly created app"
+          "Troubleshot production errors to mitigate end user impact"
         }
       />
       <Attribute
-        heading={"Mentoring"}
+        heading={"Collaborated"}
         description={
-          "Mentoring new team members & interns on frontend and ongoing issues"
+          "Collaborated with team members & stakeholders to provide high quality user experience"
         }
       />
       <Attribute
-        heading={"Planning"}
-        description={"Plannng new sprints & assigning tasks to team members"}
+        heading={"Wrote"}
+        description={"Wrote technical documentation for newly created apps"}
       />
       <Attribute
-        heading={"Mentoring"}
+        heading={"Mentored"}
         description={
-          "Mentoring new team members & interns on frontend and ongoing issues"
+          "Mentored new team members on best practices and code quality"
         }
       />
       <Attribute
-        heading={"Planning"}
-        description={"Plannng new sprints & assigning tasks to team members"}
+        heading={"Programmed"}
+        description={"Programmed  low-level and high-level code"}
       />
     </div>
   </div>

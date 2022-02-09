@@ -6,13 +6,11 @@ export const Intro = () => (
     <div className={styles.introText}>
       <h1>Luthfi Bustillos</h1>
       <p>
-        I am full-stack developer, born in Ecuador and residing in the United
-        States
+        I am a full-stack developer with experience in backend, frontend and
+        UI/UX with a focus on creating smooth user interfaces from start to
+        finish.
       </p>
-      <p>
-        I am most interested in building innovative user experiences and giving
-        users that wow experience
-      </p>
+      <p>Generally I enjoy coding and solving user problems.</p>
     </div>
 
     <Terminal />

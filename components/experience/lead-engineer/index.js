@@ -28,25 +28,26 @@ export const LeadEngineer = () => {
       />
       <div className={commonStyles.grid}>
         <Attribute
-          heading={"Building"}
-          description={"Building new app using Typescript, React, and Nextjs"}
-        />
-        <Attribute
-          heading={"Leading"}
+          heading={"Developing"}
           description={
-            "Leading and implementing UI/UX designs for newly created app"
-          }
-        />
-        <Skills />
-        <Attribute
-          heading={"Mentoring"}
-          description={
-            "Mentoring new team members & interns on frontend and ongoing issues"
+            "Developing and implementing internal company software and libraries"
           }
         />
         <Attribute
           heading={"Planning"}
-          description={"Plannng new sprints & assigning tasks to team members"}
+          description={"Plannng new sprints & delegating tasks to team members"}
+        />
+
+        <Skills />
+        <Attribute
+          heading={"Designing"}
+          description={
+            "Designing and implementing UI/UX designs for newly created app"
+          }
+        />
+        <Attribute
+          heading={"Implementing"}
+          description={"Implementing designs to exact UI/UX requirements"}
         />
       </div>
     </div>
