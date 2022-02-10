@@ -24,6 +24,11 @@
   padding: 2rem;
   grid-column: span 2;
   text-align: center;
+  line-height: 3rem;
+
+  @media (max-width: 800px) {
+    text-align: left;
+  }
 
   p {
     font-weight: 300;
