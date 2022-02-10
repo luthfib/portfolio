@@ -10,7 +10,7 @@ export const Intro = () => (
         UI/UX with a focus on creating smooth user interfaces from start to
         finish.
       </p>
-      <p>Generally I enjoy coding and solving user problems.</p>
+      <p>I enjoy coding and solving user problems.</p>
     </div>
 
     <Terminal />
