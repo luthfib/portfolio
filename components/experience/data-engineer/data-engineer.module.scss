@@ -12,6 +12,51 @@
   }
 }
 
+.patent {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2rem;
+  background: #111;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  background: #333;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  grid-column: span 2;
+  text-align: center;
+
+  p {
+    font-weight: 300;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    text-decoration: none !important;
+    white-space: nowrap;
+    color: #3291ff;
+  }
+
+  a:after {
+    content: "";
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+    transform-origin: left;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
+
+  a:hover:after {
+    background-color: #3291ff;
+    transform: scaleX(1);
+  }
+}
+
 .skillsGrid {
   @include start-animation-state;
   display: flex;

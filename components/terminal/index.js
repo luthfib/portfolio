@@ -19,6 +19,7 @@ export const Terminal = () => (
         <li>python</li>
         <li>golang</li>
         <li>javascript</li>
+        <li>node</li>
       </ul>
     </div>
   </div>

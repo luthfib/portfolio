@@ -68,14 +68,26 @@ const Skills = ({ width, height }) => {
   );
 };
 
+const Patent = ({ heading }) => {
+  return (
+    <div className={styles.patent}>
+      <h3>{heading}</h3>
+      <p>
+        <a
+          target="_blank"
+          href="https://patentscope.wipo.int/search/en/detail.jsf?docId=US313893643"
+        >
+          Patented
+        </a>{" "}
+        a unique method that deters scammers from purchasing the company product
+      </p>
+    </div>
+  );
+};
+
 const Summary = ({ forwardRef }) => (
   <div ref={forwardRef} className={commonStyles.grid}>
-    <Attribute
-      heading={"Patent"}
-      description={
-        "Patented a unique method that deters scammers from purchasing the company product"
-      }
-    />
+    <Patent heading={"Patent"} />
     <Attribute
       heading={"Maintaned"}
       description={
@@ -103,6 +115,10 @@ const Summary = ({ forwardRef }) => (
       description={
         "Assisted with Machine Learning models & data-driven solutions"
       }
+    />
+    <Attribute
+      heading={"Custom"}
+      description={"Built Custom visualizations using D3"}
     />
   </div>
 );
