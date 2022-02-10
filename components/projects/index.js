@@ -68,7 +68,7 @@ export const Projects = () => (
       <Project
         name="Borneo Football"
         description={
-          "Modernized tech stack to increase web performance vitals and give fresh look"
+          "Help non-profit organization build a site to accept payments and help visibiilty"
         }
         src={"/icons/borneo.svg"}
         altSrc={"borneo football icon"}
