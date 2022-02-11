@@ -31,10 +31,8 @@ export const ResearchEngineer = () => (
         description={"Wrote technical documentation for newly created apps"}
       />
       <Attribute
-        heading={"Mentored"}
-        description={
-          "Mentored new team members on best practices and code quality"
-        }
+        heading={"Open-source"}
+        description={"Wrote and developed various open-source repos"}
       />
       <Attribute
         heading={"Programmed"}

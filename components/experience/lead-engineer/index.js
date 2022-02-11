@@ -35,7 +35,9 @@ export const LeadEngineer = () => {
         />
         <Attribute
           heading={"Planning"}
-          description={"Plannng new sprints & delegating tasks to team members"}
+          description={
+            "Planning new sprints & delegating tasks to team members"
+          }
         />
 
         <Skills />
