@@ -39,7 +39,7 @@ export const SoftwareEngineer = () => (
   <div className={commonStyles.container}>
     <ExperienceTimelineHeader
       year={"2019"}
-      role={"Software Engineer- Optum"}
+      role={"Software Engineer - Optum"}
       gradient={commonStyles.orangeGradient}
     />
     <div className={commonStyles.grid}>
