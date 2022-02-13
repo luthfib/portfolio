@@ -47,7 +47,7 @@ export const SoftwareEngineer = () => (
       <Attribute
         heading={"Automated"}
         description={
-          "Automated unit tests, integration tests,and zero downtime deployments using Jenkins"
+          "Automated unit tests, integration tests, and zero downtime deployments using Jenkins"
         }
       />
       <Attribute
