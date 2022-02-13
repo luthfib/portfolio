@@ -25,8 +25,8 @@ export const ExperienceTimelineHeader = ({
     <div ref={ref} className={styles.containerHeader}>
       <span className={styles.line}></span>
       <div className={styles.circle}> </div>
-      <h2 className={gradient}>{year}</h2>
-      <p>{role}</p>
+      <p>{year}</p>
+      <h2 className={gradient}>{role}</h2>
     </div>
   );
 };
