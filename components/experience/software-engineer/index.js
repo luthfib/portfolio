@@ -59,7 +59,7 @@ export const SoftwareEngineer = () => (
       <Attribute
         heading={"Deployed"}
         description={
-          "Deployed apps in Openshift,including Logstash, ElasticSearch, Kibana and amongst others"
+          "Deployed apps in Openshift,including Logstash, ElasticSearch, Kibana, amongst others"
         }
       />
       <Attribute
