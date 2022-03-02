@@ -24,7 +24,7 @@ export const LeadEngineer = () => {
     <div className={commonStyles.container}>
       <ExperienceTimelineHeader
         year={"2021"}
-        role={"Lead Software Engineer - Optum"}
+        role={"Senior Software Engineer - Optum"}
       />
       <div className={commonStyles.grid}>
         <Attribute
