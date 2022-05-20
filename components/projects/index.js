@@ -4,7 +4,7 @@ import styles from "./projects.module.scss";
 import { useAnimateOnViewport } from "../../lib/hooks";
 import { useOnClickOutside } from "../../lib/hooks";
 
-const Modal = ({ description, techUsed, setModalIsOpen }) => {
+const Modal = ({ description, techUsed, setModalIsOpen, modalIsOpen }) => {
   const ref = useRef(null);
 
   const CloseModal = () => {
@@ -14,7 +14,7 @@ const Modal = ({ description, techUsed, setModalIsOpen }) => {
   useOnClickOutside(ref, () => CloseModal());
 
   return (
-    <div className={styles.overlay} aria-hidden="true">
+    <div className={styles.overlay} aria-hidden={!modalIsOpen}>
       <div ref={ref} role="dialog" tabIndex={"-1"} className={styles.modal}>
         <div className={styles.modalContent}>
           <h3>Details</h3>
@@ -50,6 +50,7 @@ const Project = ({ name, description, techUsed, src, altSrc }) => {
           techUsed={techUsed}
           setModalIsOpen={setModalIsOpen}
           description={description}
+          modalIsOpen={modalIsOpen}
         />
       ) : null}
       <div ref={ref} className={styles.project} onClick={openModal}>
