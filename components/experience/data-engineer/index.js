@@ -89,7 +89,7 @@ const Summary = ({ forwardRef }) => (
   <div ref={forwardRef} className={commonStyles.grid}>
     <Patent heading={"Patent"} />
     <Attribute
-      heading={"Maintaned"}
+      heading={"Maintained"}
       description={
         "Maintained and optimized Redshift DB in AWS, as well as EMR cluster for data pulls"
       }
